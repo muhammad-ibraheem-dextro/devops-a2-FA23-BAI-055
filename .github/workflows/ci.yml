@@ -23,6 +23,7 @@ jobs:
           test -f Dockerfile
           grep -q 'Muhammad Ibraheem' index.html
           grep -q 'id="labs"' index.html
+          grep -q 'THIS_STRING_DOES_NOT_EXIST' index.html
 
       - name: Log in to Docker Hub
         if: github.ref == 'refs/heads/main'
